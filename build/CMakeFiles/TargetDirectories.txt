@@ -1,0 +1,3 @@
+/workspaces/Test-repository/build/CMakeFiles/Animal.dir
+/workspaces/Test-repository/build/CMakeFiles/edit_cache.dir
+/workspaces/Test-repository/build/CMakeFiles/rebuild_cache.dir
