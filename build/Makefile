@@ -117,72 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Animal
+# Target rules for targets named MyProject
 
 # Build rule for target.
-Animal: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Animal
-.PHONY : Animal
+MyProject: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyProject
+.PHONY : MyProject
 
 # fast build rule for target.
-Animal/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/build
-.PHONY : Animal/fast
-
-src/animal.o: src/animal.cpp.o
-.PHONY : src/animal.o
-
-# target to build an object file
-src/animal.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/src/animal.cpp.o
-.PHONY : src/animal.cpp.o
-
-src/animal.i: src/animal.cpp.i
-.PHONY : src/animal.i
-
-# target to preprocess a source file
-src/animal.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/src/animal.cpp.i
-.PHONY : src/animal.cpp.i
-
-src/animal.s: src/animal.cpp.s
-.PHONY : src/animal.s
-
-# target to generate assembly for a file
-src/animal.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/src/animal.cpp.s
-.PHONY : src/animal.cpp.s
-
-src/cat.o: src/cat.cpp.o
-.PHONY : src/cat.o
-
-# target to build an object file
-src/cat.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/src/cat.cpp.o
-.PHONY : src/cat.cpp.o
-
-src/cat.i: src/cat.cpp.i
-.PHONY : src/cat.i
-
-# target to preprocess a source file
-src/cat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/src/cat.cpp.i
-.PHONY : src/cat.cpp.i
-
-src/cat.s: src/cat.cpp.s
-.PHONY : src/cat.s
-
-# target to generate assembly for a file
-src/cat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/src/cat.cpp.s
-.PHONY : src/cat.cpp.s
+MyProject/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/build
+.PHONY : MyProject/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -190,7 +142,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -198,7 +150,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Animal.dir/build.make CMakeFiles/Animal.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -209,13 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Animal"
-	@echo "... src/animal.o"
-	@echo "... src/animal.i"
-	@echo "... src/animal.s"
-	@echo "... src/cat.o"
-	@echo "... src/cat.i"
-	@echo "... src/cat.s"
+	@echo "... MyProject"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
