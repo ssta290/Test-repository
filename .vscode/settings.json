@@ -48,5 +48,9 @@
 
   "github.copilot.enable": {
     "*": false
-  }
+  },
+
+  // Set tab size to 2 and use spaces for indentation
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true
 }
