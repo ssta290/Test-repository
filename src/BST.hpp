@@ -13,13 +13,24 @@ template <typename T>
 class BinarySearchTree {
  private:
   Node<T>* root_;
+  void DeleteSubtree(Node<T>* n) {
+    if (n == nullptr) return;
+
+    if (n->l_child) {
+      DeleteSubtree(n->l_child);
+    }
+    if (n->r_child) {
+      DeleteSubtree(n->r_child);
+    }
+
+    delete n;
+  }
 
  public:
   BinarySearchTree() : root_(nullptr) {}
-  ~BinarySearchTree() {}
+  ~BinarySearchTree() { DeleteSubtree(root_); }
   T FindMin() const {
     if (!root_) {
-      throw std::out_of_range("Tree empty!");
       return T();
     }
 
@@ -32,7 +43,6 @@ class BinarySearchTree {
   }
   T FindMax() const {
     if (!root_) {
-      throw std::out_of_range("Tree empty!");
       return T();
     }
 
@@ -87,5 +97,29 @@ class BinarySearchTree {
     }
   }
   std::vector<T> Traverse() const { return std::vector<T>(1, T()); }
-  void Remove(const T& value) { return; }
+  void Remove(const T& value) {
+    Node<T>* n = root_;
+    Node<T>* parent = nullptr;
+
+    while (n != nullptr && n->data != value) {
+      parent = n;
+      if (value < n->data) {
+        n = n->l_child;
+      } else {
+        n = n->r_child;
+      }
+    }
+
+    if (n == nullptr) return;  // Value not found
+
+    if (parent == nullptr) {
+      root_ = nullptr;  // if n is the root
+    } else if (parent->l_child == n) {
+      parent->l_child = nullptr;
+    } else {
+      parent->r_child = nullptr;
+    }
+
+    DeleteSubtree(n);
+  }
 };

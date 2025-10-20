@@ -20,7 +20,7 @@ int main() {
   }
   std::cout << std::endl << std::endl;
 
-  cout << "Tree Contains: ";
+  cout << "Before removal, tree Contains: ";
   bool starting_flag = false;
   for (int i = 1; i <= 10; i++) {
     if (tree.Contains(i)) {
@@ -36,5 +36,31 @@ int main() {
   std::cout << std::endl;
 
   std::cout << "Minimum value: " << tree.FindMin() << std::endl;
-  std::cout << "Maximum value: " << tree.FindMax() << std::endl;
+  std::cout << "Maximum value: " << tree.FindMax() << std::endl << std::endl;
+
+  // Remove all numbers less than 4
+  for (int i = 1; i<= 3; i++) {
+    tree.Remove(i);
+  }
+
+  cout << "After removal, tree Contains: ";
+  starting_flag = false;
+  for (int i = 1; i <= 10; i++) {
+    if (tree.Contains(i)) {
+      if (starting_flag == false) {
+        starting_flag = true;
+      } else {
+        std::cout << ", ";
+      }
+
+      std::cout << i;
+    }
+  }
+  std::cout << std::endl;
+  if (tree.FindMin() == 0 || tree.FindMax() == 0) {
+    std::cout << "Tree is empty!" << std::endl << std::endl;
+  } else {
+    std::cout << "Minimum value: " << tree.FindMin() << std::endl;
+    std::cout << "Maximum value: " << tree.FindMax() << std::endl << std::endl;
+  }
 }
