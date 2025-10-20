@@ -153,30 +153,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/naive_ft.o: src/naive_ft.cpp.o
-.PHONY : src/naive_ft.o
-
-# target to build an object file
-src/naive_ft.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/naive_ft.cpp.o
-.PHONY : src/naive_ft.cpp.o
-
-src/naive_ft.i: src/naive_ft.cpp.i
-.PHONY : src/naive_ft.i
-
-# target to preprocess a source file
-src/naive_ft.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/naive_ft.cpp.i
-.PHONY : src/naive_ft.cpp.i
-
-src/naive_ft.s: src/naive_ft.cpp.s
-.PHONY : src/naive_ft.s
-
-# target to generate assembly for a file
-src/naive_ft.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/naive_ft.cpp.s
-.PHONY : src/naive_ft.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -189,9 +165,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/naive_ft.o"
-	@echo "... src/naive_ft.i"
-	@echo "... src/naive_ft.s"
 .PHONY : help
 
 
