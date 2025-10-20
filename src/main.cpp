@@ -1,42 +1,40 @@
 #include <iostream>
-#include "singlyLinkedList.hpp"  // Assuming your header is named SinglyLinkedList.hpp
+#include <random>
+
+#include "BST.hpp"
 
 using namespace std;
 
 int main() {
-  SinglyLinkedList<int> list;
+  std::random_device rd;
+  std::mt19937 gen(rd());  // Mersenne Twister generator
+  std::uniform_int_distribution<> dis(1, 10);  // Distribution in the range [1, 10]
 
-  for (int i = 1; i <= 4; i++) {
-    list.Add(i);
+  BinarySearchTree<int> tree;
+
+  cout << "Inserting Values: ";
+  for (int i = 0; i < 10; i++) {
+    int random_value = dis(gen);  // Generate a random number between 1 and 10
+    std::cout << random_value << (i < 9 ? ", " : " ");
+    tree.Insert(random_value);  // Insert into the BST
   }
+  std::cout << std::endl << std::endl;
 
-  list.Insert(5, 5);
-  list.Insert(5, 4);
-  list.Insert(5, 2);
-  list.Insert(5, 0);
-  list.Insert(5, 5);
-  list.Insert(5, 5);
-  list.Insert(5, 5);
+  cout << "Tree Contains: ";
+  bool starting_flag = false;
+  for (int i = 1; i <= 10; i++) {
+    if (tree.Contains(i)) {
+      if (starting_flag == false) {
+        starting_flag = true;
+      } else {
+        std::cout << ", ";
+      }
 
-  int k = 0;
-  while (list.FindKth(k) != 0) {
-    cout << list.FindKth(k) << ", ";
-    k++;
+      std::cout << i;
+    }
   }
-  cout << endl;
+  std::cout << std::endl;
 
-  for (int i = 0; i < 9; i++) {
-    list.Remove(0);
-  }
-
-  k = 0;
-  while (list.FindKth(k) != 0) {
-    cout << list.FindKth(k) << ", ";
-    k++;
-  }
-  cout << endl;
-
-  list.Remove(0);
-  
-  return 0;
+  std::cout << "Minimum value: " << tree.FindMin() << std::endl;
+  std::cout << "Maximum value: " << tree.FindMax() << std::endl;
 }

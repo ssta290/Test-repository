@@ -1,3 +1,6 @@
+#ifndef SINGLYLINKEDLIST_HPP
+#define SINGLYLINKEDLIST_HPP
+
 #include <iostream>
 
 template <typename T>
@@ -42,21 +45,15 @@ class SinglyLinkedList {
     }
 
     int Add(const T var) {
-        // Reminder that 'new class_name()' creates a pointer on the heap
         Node<T>* newNode = new Node<T>(var);
-        
+    
         if (head_ == nullptr) {
             head_ = newNode;
             tail_ = newNode;
-            return 1;
+        } else {
+            tail_->next = newNode;
+            tail_ = newNode;
         }
-        
-        Node<T>* n = head_;
-        while (n->next != nullptr) {
-            n = n->next;
-        }
-        n->next = newNode;
-        tail_ = newNode;
         return 1;
     }
 
@@ -117,3 +114,5 @@ class SinglyLinkedList {
         return 1;
     }
 };
+
+#endif  // SINGLYLINKEDLIST_HPP
