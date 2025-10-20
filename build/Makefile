@@ -129,29 +129,29 @@ MyProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/build
 .PHONY : MyProject/fast
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+src/lucas_sequence_example.o: src/lucas_sequence_example.cpp.o
+.PHONY : src/lucas_sequence_example.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/lucas_sequence_example.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o
+.PHONY : src/lucas_sequence_example.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/lucas_sequence_example.i: src/lucas_sequence_example.cpp.i
+.PHONY : src/lucas_sequence_example.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/lucas_sequence_example.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.i
+.PHONY : src/lucas_sequence_example.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/lucas_sequence_example.s: src/lucas_sequence_example.cpp.s
+.PHONY : src/lucas_sequence_example.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/lucas_sequence_example.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.s
+.PHONY : src/lucas_sequence_example.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyProject"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/lucas_sequence_example.o"
+	@echo "... src/lucas_sequence_example.i"
+	@echo "... src/lucas_sequence_example.s"
 .PHONY : help
 
 
