@@ -30,36 +30,26 @@ class BinarySearchTree {
   BinarySearchTree() : root_(nullptr) {}
   ~BinarySearchTree() { DeleteSubtree(root_); }
   T FindMin() const {
-    if (!root_) {
-      return T();
-    }
-
+    if (!root_) return T();
     Node<T>* n = root_;
-    while (true) {
-      if (!(n->l_child)) return n->data;
-
+    while (n->l_child) {  // Move to the leftmost node
       n = n->l_child;
     }
+    return n->data;
   }
+
   T FindMax() const {
-    if (!root_) {
-      return T();
-    }
-
+    if (!root_) return T();
     Node<T>* n = root_;
-    while (true) {
-      if (!(n->r_child)) return n->data;
-
+    while (n->r_child) {  // Move to the leftmost node
       n = n->r_child;
     }
+    return n->data;
   }
+
   bool Contains(const T& value) const {
     Node<T>* n = root_;
-    while (true) {
-      if (!n) {
-        return false;
-      }
-
+    while (n) {
       if (value < n->data) {
         n = n->l_child;
       } else if (value == n->data) {
@@ -68,7 +58,10 @@ class BinarySearchTree {
         n = n->r_child;
       }
     }
+
+    return false;
   }
+
   void Insert (const T& value) {
     Node<T>* newNode = new Node<T>(value);
 
@@ -96,8 +89,79 @@ class BinarySearchTree {
       }
     }
   }
-  std::vector<T> Traverse() const { return std::vector<T>(1, T()); }
+
+  std::vector<T> Traverse() const { 
+    std::vector<T> result;
+    TraverseFromNode(root_, result);
+    return result;
+  }
+
+  void TraverseFromNode(const Node<T>* n, std::vector<T>& container) const {
+    if (!n) return;
+
+    if (n->l_child) {
+      TraverseFromNode(n->l_child, container);
+    }
+
+    container.push_back(n->data);
+
+    if (n->r_child) {
+      TraverseFromNode(n->r_child, container);
+    }
+  }
+
   void Remove(const T& value) {
+    Node<T>* n = root_;
+    Node<T>* parent = nullptr;
+    
+    while (n && n->data != value) {
+      parent = n;
+
+      if (value < n->data) {
+        n = n->l_child;
+      } else {
+        n = n->r_child;
+      }
+    }
+
+    if (n == nullptr) return;  // Value does not exist in tree
+
+    if (parent == nullptr) {
+      // Node is root
+      RemoveHelper(root_, n);
+    } else if (n == parent->l_child) {
+      // Node is left child of parent
+      RemoveHelper(parent->l_child, n);
+    } else {
+      // Node is right child of parent
+      RemoveHelper(parent->r_child, n);
+    }
+  }
+
+  void RemoveHelper(Node<T>*& parent_pointer, Node<T>* n) {
+    // Node is root
+    if (n->r_child) {
+      parent_pointer = n->r_child;
+      if (n->l_child) {
+        // Left child has to be allocated at the far left of right child if it exists
+        Node<T>* lowest_node = n->r_child;
+        while (lowest_node->l_child) {
+          lowest_node = lowest_node->l_child;
+        }
+        lowest_node->l_child = n->l_child;
+      }
+    } else if (n->l_child) {
+      // Node only has a left child
+      parent_pointer = n->l_child;
+    } else {
+      // Node has no children
+      parent_pointer = nullptr;
+    }
+
+    delete n;
+  }
+
+  void RemoveSubtreeFromValue(const T& value) {
     Node<T>* n = root_;
     Node<T>* parent = nullptr;
 

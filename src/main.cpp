@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <vector>
 
 #include "BST.hpp"
 
@@ -38,10 +39,9 @@ int main() {
   std::cout << "Minimum value: " << tree.FindMin() << std::endl;
   std::cout << "Maximum value: " << tree.FindMax() << std::endl << std::endl;
 
-  // Remove all numbers less than 4
-  for (int i = 1; i<= 3; i++) {
-    tree.Remove(i);
-  }
+  // Remove one 6
+  std::cout << "Removing one 6..." << std::endl << std::endl;
+  tree.Remove(6);
 
   cout << "After removal, tree Contains: ";
   starting_flag = false;
@@ -63,4 +63,18 @@ int main() {
     std::cout << "Minimum value: " << tree.FindMin() << std::endl;
     std::cout << "Maximum value: " << tree.FindMax() << std::endl << std::endl;
   }
+
+  std::cout << "Traversing tree: ";
+  std::vector<int> output = tree.Traverse();
+  starting_flag = false;
+  for (int i : output) {
+    if (starting_flag == false) {
+      starting_flag = true;
+    } else {
+      std::cout << ", ";
+    }
+
+    std::cout << i;
+  }
+  std::cout << std::endl;
 }
