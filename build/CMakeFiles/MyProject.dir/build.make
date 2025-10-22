@@ -69,31 +69,47 @@ include CMakeFiles/MyProject.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MyProject.dir/flags.make
 
-CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o: CMakeFiles/MyProject.dir/flags.make
-CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o: /workspaces/Test-repository/src/lucas_sequence_example.cpp
-CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o: CMakeFiles/MyProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/Test-repository/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o -MF CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o.d -o CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o -c /workspaces/Test-repository/src/lucas_sequence_example.cpp
+CMakeFiles/MyProject.dir/src/BST.cpp.o: CMakeFiles/MyProject.dir/flags.make
+CMakeFiles/MyProject.dir/src/BST.cpp.o: /workspaces/Test-repository/src/BST.cpp
+CMakeFiles/MyProject.dir/src/BST.cpp.o: CMakeFiles/MyProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/Test-repository/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MyProject.dir/src/BST.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyProject.dir/src/BST.cpp.o -MF CMakeFiles/MyProject.dir/src/BST.cpp.o.d -o CMakeFiles/MyProject.dir/src/BST.cpp.o -c /workspaces/Test-repository/src/BST.cpp
 
-CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Test-repository/src/lucas_sequence_example.cpp > CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.i
+CMakeFiles/MyProject.dir/src/BST.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/src/BST.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Test-repository/src/BST.cpp > CMakeFiles/MyProject.dir/src/BST.cpp.i
 
-CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Test-repository/src/lucas_sequence_example.cpp -o CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.s
+CMakeFiles/MyProject.dir/src/BST.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/src/BST.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Test-repository/src/BST.cpp -o CMakeFiles/MyProject.dir/src/BST.cpp.s
+
+CMakeFiles/MyProject.dir/src/main.cpp.o: CMakeFiles/MyProject.dir/flags.make
+CMakeFiles/MyProject.dir/src/main.cpp.o: /workspaces/Test-repository/src/main.cpp
+CMakeFiles/MyProject.dir/src/main.cpp.o: CMakeFiles/MyProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/Test-repository/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MyProject.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyProject.dir/src/main.cpp.o -MF CMakeFiles/MyProject.dir/src/main.cpp.o.d -o CMakeFiles/MyProject.dir/src/main.cpp.o -c /workspaces/Test-repository/src/main.cpp
+
+CMakeFiles/MyProject.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyProject.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/Test-repository/src/main.cpp > CMakeFiles/MyProject.dir/src/main.cpp.i
+
+CMakeFiles/MyProject.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyProject.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/Test-repository/src/main.cpp -o CMakeFiles/MyProject.dir/src/main.cpp.s
 
 # Object files for target MyProject
 MyProject_OBJECTS = \
-"CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o"
+"CMakeFiles/MyProject.dir/src/BST.cpp.o" \
+"CMakeFiles/MyProject.dir/src/main.cpp.o"
 
 # External object files for target MyProject
 MyProject_EXTERNAL_OBJECTS =
 
-MyProject: CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o
+MyProject: CMakeFiles/MyProject.dir/src/BST.cpp.o
+MyProject: CMakeFiles/MyProject.dir/src/main.cpp.o
 MyProject: CMakeFiles/MyProject.dir/build.make
 MyProject: CMakeFiles/MyProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/Test-repository/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MyProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspaces/Test-repository/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MyProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

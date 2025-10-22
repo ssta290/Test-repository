@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o -o MyProject 
+/usr/bin/c++ CMakeFiles/MyProject.dir/src/BST.cpp.o CMakeFiles/MyProject.dir/src/main.cpp.o -o MyProject 

@@ -129,29 +129,53 @@ MyProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/build
 .PHONY : MyProject/fast
 
-src/lucas_sequence_example.o: src/lucas_sequence_example.cpp.o
-.PHONY : src/lucas_sequence_example.o
+src/BST.o: src/BST.cpp.o
+.PHONY : src/BST.o
 
 # target to build an object file
-src/lucas_sequence_example.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.o
-.PHONY : src/lucas_sequence_example.cpp.o
+src/BST.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/BST.cpp.o
+.PHONY : src/BST.cpp.o
 
-src/lucas_sequence_example.i: src/lucas_sequence_example.cpp.i
-.PHONY : src/lucas_sequence_example.i
+src/BST.i: src/BST.cpp.i
+.PHONY : src/BST.i
 
 # target to preprocess a source file
-src/lucas_sequence_example.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.i
-.PHONY : src/lucas_sequence_example.cpp.i
+src/BST.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/BST.cpp.i
+.PHONY : src/BST.cpp.i
 
-src/lucas_sequence_example.s: src/lucas_sequence_example.cpp.s
-.PHONY : src/lucas_sequence_example.s
+src/BST.s: src/BST.cpp.s
+.PHONY : src/BST.s
 
 # target to generate assembly for a file
-src/lucas_sequence_example.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/lucas_sequence_example.cpp.s
-.PHONY : src/lucas_sequence_example.cpp.s
+src/BST.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/BST.cpp.s
+.PHONY : src/BST.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -162,9 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyProject"
-	@echo "... src/lucas_sequence_example.o"
-	@echo "... src/lucas_sequence_example.i"
-	@echo "... src/lucas_sequence_example.s"
+	@echo "... src/BST.o"
+	@echo "... src/BST.i"
+	@echo "... src/BST.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

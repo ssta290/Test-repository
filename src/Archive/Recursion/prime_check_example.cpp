@@ -13,10 +13,17 @@ bool is_prime(int n) {
     // How can you systematically check all possible divisors?
     // What's the upper limit for divisors you need to check?
     // Hint: You might want to use a helper function with a divisor parameter
+
+    if (n == 2) return true; 
+    int i = 2;
+    while (i < n) {
+
+    }
 }
 
 bool is_prime_helper(int n, int divisor) {
     // TODO: Implement the helper function for prime checking
+    return 0;
 }
 
 int main() {

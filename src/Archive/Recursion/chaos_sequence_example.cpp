@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 
 int chaos(int n) {
@@ -6,7 +7,7 @@ int chaos(int n) {
     // Q(1) = Q(2) = 1
 }
 
-/*
+
 int main() {
     std::cout << "Chaos Sequence (Hofstadter Q-sequence):" << std::endl;
     std::cout << "======================================" << std::endl;
