@@ -24,12 +24,14 @@ class AVLTree {
     } else {
       n->right = InsertValue(value, n->right);
     }
+
+    UpdateHeight(n);
     n = Rebalance(n);
     return n;
   }
 
   Node* Rebalance(Node* n) {
-    UpdateHeight(n);
+    if (!n) return n;   // Classic if n does not exist, return n
 
     if (GetBalance(n) > 1 ) {   // Tree is left heavy
       if (GetBalance(n->left) >= 0) {
@@ -48,20 +50,18 @@ class AVLTree {
     return n;
   }
 
-  void UpdateHeight(Node* n) {
-    if (!n) throw std::runtime_error("Cannot update height: node does not exist!");
+  int GetHeight(Node* n) { return n ? n->height : -1; }
 
-    int left_height = n->left ? n->left->height : 0;
-    int right_height = n->right ? n->right->height : 0;
-    n->height =  1 + max(left_height, right_height); 
+  void UpdateHeight(Node* n) {
+    if (n) n->height = 1 + max(GetHeight(n->left), GetHeight(n->right)); 
   }
 
   int GetBalance(Node* n) {
-    if (!n) throw std::runtime_error("Cannot get balance: node does not exist!");
-
-    int left_height = n->left ? n->left->height : -1;
-    int right_height = n->right ? n->right->height : -1;
-    return left_height - right_height; 
+    if (n) {
+      return GetHeight(n->left) - GetHeight(n->right);
+    } else {
+      return 0;
+    }
   }
 
   Node* RightRotate(Node* n) {
@@ -76,6 +76,9 @@ class AVLTree {
     Node* temp = n->left;
     n->left = n->left->right;
     temp->right = n;
+
+    UpdateHeight(n);
+    UpdateHeight(temp);
     return temp;
   }
 
@@ -91,6 +94,9 @@ class AVLTree {
     Node* temp = n->right;
     n->right = n->right->left;
     temp->left = n;
+
+    UpdateHeight(n);
+    UpdateHeight(temp);
     return temp;
   }
 

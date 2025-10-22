@@ -3,7 +3,7 @@
 
 template <typename T>
 class BinarySearchTree {
- protected:
+ private:
   // Struct for the node
   struct Node {
     T data;
@@ -105,7 +105,7 @@ class BinarySearchTree {
       n->data = min;
       n->right = RemoveNode(n->right, min);
       return n;
-    }
+      }
 
     // Recursive case: update subtree
     if (v < n->data) n->left = RemoveNode(n->left, v);
@@ -167,40 +167,3 @@ class BinarySearchTree {
   // Remove function
   void Remove(const T& value) { root = RemoveNode(root, value); }
 };
-
-int main() {
-  // Create a BinarySearchTree object with int type
-  BinarySearchTree<int> bst;
-
-  std::cout << "Binary Search Tree Template Implementation" << std::endl;
-  std::cout << "==========================================" << std::endl;
-
-  // Test the BST with the following operations:
-  std::cout << "Inserting values: 50, 30, 70, 20, 40, 60, 80" << std::endl;
-  bst.Insert(50);
-  bst.Insert(30);
-  bst.Insert(70);
-  bst.Insert(20);
-  bst.Insert(40);
-  bst.Insert(60);
-  bst.Insert(80);
-
-  std::cout << "Inorder traversal: ";
-  bst.Traverse();
-
-  std::cout << "Contains 40: " << (bst.Contains(40) ? "true" : "false")
-            << std::endl;
-  std::cout << "Contains 90: " << (bst.Contains(90) ? "true" : "false")
-            << std::endl;
-
-  std::cout << "Minimum value: " << bst.FindMin() << std::endl;
-  std::cout << "Maximum value: " << bst.FindMax() << std::endl;
-
-  std::cout << "Removing value 30..." << std::endl;
-  bst.Remove(30);
-
-  std::cout << "Inorder traversal after removal: ";
-  bst.Traverse();
-
-  return 0;
-}
