@@ -1,5 +1,5 @@
-CMakeFiles/MyProject.dir/src/BST.cpp.o: \
- /workspaces/Test-repository/src/BST.cpp /usr/include/stdc-predef.h \
+CMakeFiles/MyProject.dir/src/Search.cpp.o: \
+ /workspaces/Test-repository/src/Search.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

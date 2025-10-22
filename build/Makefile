@@ -129,53 +129,29 @@ MyProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/build
 .PHONY : MyProject/fast
 
-src/BST.o: src/BST.cpp.o
-.PHONY : src/BST.o
+src/Search.o: src/Search.cpp.o
+.PHONY : src/Search.o
 
 # target to build an object file
-src/BST.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/BST.cpp.o
-.PHONY : src/BST.cpp.o
+src/Search.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/Search.cpp.o
+.PHONY : src/Search.cpp.o
 
-src/BST.i: src/BST.cpp.i
-.PHONY : src/BST.i
-
-# target to preprocess a source file
-src/BST.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/BST.cpp.i
-.PHONY : src/BST.cpp.i
-
-src/BST.s: src/BST.cpp.s
-.PHONY : src/BST.s
-
-# target to generate assembly for a file
-src/BST.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/BST.cpp.s
-.PHONY : src/BST.cpp.s
-
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/Search.i: src/Search.cpp.i
+.PHONY : src/Search.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/Search.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/Search.cpp.i
+.PHONY : src/Search.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/Search.s: src/Search.cpp.s
+.PHONY : src/Search.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/Search.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/Search.cpp.s
+.PHONY : src/Search.cpp.s
 
 # Help Target
 help:
@@ -186,12 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyProject"
-	@echo "... src/BST.o"
-	@echo "... src/BST.i"
-	@echo "... src/BST.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/Search.o"
+	@echo "... src/Search.i"
+	@echo "... src/Search.s"
 .PHONY : help
 
 

@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/workspaces/Test-repository/src/BST.cpp" "CMakeFiles/MyProject.dir/src/BST.cpp.o" "gcc" "CMakeFiles/MyProject.dir/src/BST.cpp.o.d"
-  "/workspaces/Test-repository/src/main.cpp" "CMakeFiles/MyProject.dir/src/main.cpp.o" "gcc" "CMakeFiles/MyProject.dir/src/main.cpp.o.d"
+  "/workspaces/Test-repository/src/Search.cpp" "CMakeFiles/MyProject.dir/src/Search.cpp.o" "gcc" "CMakeFiles/MyProject.dir/src/Search.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
