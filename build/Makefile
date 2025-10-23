@@ -129,29 +129,29 @@ MyProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/build
 .PHONY : MyProject/fast
 
-src/Search.o: src/Search.cpp.o
-.PHONY : src/Search.o
+src/Main2.o: src/Main2.cpp.o
+.PHONY : src/Main2.o
 
 # target to build an object file
-src/Search.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/Search.cpp.o
-.PHONY : src/Search.cpp.o
+src/Main2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/Main2.cpp.o
+.PHONY : src/Main2.cpp.o
 
-src/Search.i: src/Search.cpp.i
-.PHONY : src/Search.i
+src/Main2.i: src/Main2.cpp.i
+.PHONY : src/Main2.i
 
 # target to preprocess a source file
-src/Search.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/Search.cpp.i
-.PHONY : src/Search.cpp.i
+src/Main2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/Main2.cpp.i
+.PHONY : src/Main2.cpp.i
 
-src/Search.s: src/Search.cpp.s
-.PHONY : src/Search.s
+src/Main2.s: src/Main2.cpp.s
+.PHONY : src/Main2.s
 
 # target to generate assembly for a file
-src/Search.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/Search.cpp.s
-.PHONY : src/Search.cpp.s
+src/Main2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyProject.dir/build.make CMakeFiles/MyProject.dir/src/Main2.cpp.s
+.PHONY : src/Main2.cpp.s
 
 # Help Target
 help:
@@ -162,9 +162,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MyProject"
-	@echo "... src/Search.o"
-	@echo "... src/Search.i"
-	@echo "... src/Search.s"
+	@echo "... src/Main2.o"
+	@echo "... src/Main2.i"
+	@echo "... src/Main2.s"
 .PHONY : help
 
 

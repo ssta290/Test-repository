@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
@@ -30,6 +31,50 @@ class AVLTree {
     return n;
   }
 
+  Node* GetMin(Node* n) {
+    if (n == nullptr) { throw std::runtime_error("Subtree does not exist"); }  // Does not exist
+    if (n->left == nullptr) {
+      return n;
+    } else {
+      return GetMin(n->left);
+    }
+  }
+
+  Node* RemoveNode(const int &value, Node* n) {
+    if (n == nullptr) {
+      return n;   // Base case
+    }
+
+    if (value < n->data) {
+      n->left = RemoveNode(value, n->left);
+      return Rebalance(UpdateHeight(n));
+    }
+
+    if (value > n->data) {
+      n->right = RemoveNode(value, n->right);
+      return Rebalance(UpdateHeight(n));
+    }
+
+    // Data is the same as value
+    if (!n->left && !n->right) {
+      delete n;   // n has no children
+      return nullptr;
+    } else if (!n->right) {
+      Node* temp = n->left;   // n only has left node
+      delete n;
+      return temp;
+    } else if (!n->left) {
+      Node* temp = n->right;   // n only has right node
+      delete n;
+      return temp;
+    } else {
+      int successor_value = GetMin(n->right)->data;
+      n->data = successor_value;
+      n->right = RemoveNode(successor_value, n->right);
+      return Rebalance(UpdateHeight(n));
+    }
+  }
+
   Node* Rebalance(Node* n) {
     if (!n) return n;   // Classic if n does not exist, return n
 
@@ -52,8 +97,9 @@ class AVLTree {
 
   int GetHeight(Node* n) { return n ? n->height : -1; }
 
-  void UpdateHeight(Node* n) {
+  Node* UpdateHeight(Node* n) {
     if (n) n->height = 1 + max(GetHeight(n->left), GetHeight(n->right)); 
+    return n;
   }
 
   int GetBalance(Node* n) {
@@ -114,10 +160,35 @@ class AVLTree {
     return LeftRotate(n);
   }
 
+  void Inorder(Node* n, std::vector<int>* values) {
+    // Base case: an empty tree
+    if (!n) return;
+
+    // Recursive case: left -> current -> right
+    Inorder(n->left, values);
+    values->push_back(n->data);
+    Inorder(n->right, values);
+  }
+
  public:
   AVLTree() : root(nullptr) {}
   ~AVLTree() { 
     // Delete all nodes
   }
   void Insert(const int &value) { root = InsertValue(value, root); }
+
+  void Remove(const int &value) { root = RemoveNode(value, root); }
+
+  void Traverse() {
+    if (!root) return;
+
+    std::vector<int> values;
+    Inorder(root, &values);
+
+    for (size_t i = 0; i < values.size() - 1; ++i) {
+      std::cout << values[i] << " ";
+    }
+    std::cout << values.back() << std::endl;
+  }
+
 };
